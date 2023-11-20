@@ -187,3 +187,45 @@ firstGameContainer.appendChild(topGameElement);
 const secondGameElement = document.createElement('p');
 secondGameElement.textContent = secondGame.name;
 secondGameContainer.appendChild(secondGameElement);
+
+function searchGames() {
+    const searchQuery = document.getElementById('search-input').value.toLowerCase();
+    const filteredGames = GAMES_JSON.filter(game => 
+        game.name.toLowerCase().includes(searchQuery)
+    );
+    displayGames(filteredGames); // Function to update the DOM with filtered games
+}
+
+function displayGames(games) {
+    const gamesContainer = document.getElementById('games-container');
+    gamesContainer.innerHTML = ''; // Clear current games
+
+    games.forEach(game => {
+        const gameElement = document.createElement('div');
+        gameElement.className = 'game';
+        gameElement.innerHTML = `
+        <img src="${game.img}" class="game-img" alt="${game.name}">
+        <h3>${game.name}</h3>
+        <p>${game.description}</p>
+        <p>Backers: ${game.backers}</p>
+        `;
+        gamesContainer.appendChild(gameElement);
+    });
+}
+
+document.getElementById('search-button').addEventListener('click', searchGames);
+
+function sortGamesAscending() {
+    deleteChildElements(gamesContainer);
+    const sortedGames = [...GAMES_JSON].sort((a, b) => a.backers - b.backers);
+    addGamesToPage(sortedGames);
+}
+
+function sortGamesDescending() {
+    deleteChildElements(gamesContainer);
+    const sortedGames = [...GAMES_JSON].sort((a, b) => b.backers - a.backers);
+    addGamesToPage(sortedGames);
+}
+
+document.getElementById('sort-asc-btn').addEventListener('click', sortGamesAscending);
+document.getElementById('sort-desc-btn').addEventListener('click', sortGamesDescending);
