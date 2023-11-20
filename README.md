@@ -17,10 +17,9 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [x] Additional features that improve the app functionality:
-* [x] Navigation to the Our Games Section: A navigation bar at the top of the page allows users to quickly jump to the "Our Games" section, enhancing the site's usability and navigation.
-* [x] Search Functionality: Users can search for a specific game by its name using the search bar. This feature dynamically filters and displays games that match the search query, providing a more user-friendly experience.
-* [x] Sorting Games by Backers: Two additional buttons enable users to sort the games in either ascending or descending order based on the number of backers. This feature adds an interactive way to explore games based on their popularity and backing.
+* [x] Navigation to the Our Games Section: A navigation bar at the top of the page allows users to quickly jump to the "Our Games" section.
+* [x] Search Functionality: Users can search for a specific game by its name using the search bar.
+* [x] Sorting Games by Backers: Two additional buttons enable users to sort the games in either ascending or descending order based on the number of backers.
 
 ## Video Walkthrough
 
@@ -37,7 +36,10 @@ GIF created with LICEcap
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Challenges:
+1. As the complexity of the application increased with each new feature, it became challenging to keep track of existing functionalities and avoid reinventing the wheel.
+2. Ensuring consistency and integration among various components required careful management and frequent revisiting of earlier code.
+3. Adapting to the event-driven nature of web development was a bit tricky. Learning how to handle and react to user actions, like clicks and searches, needed a different way of thinking about programming.
 
 ## License
 
