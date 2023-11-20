@@ -17,7 +17,10 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [x] List anything else that you can get done to improve the app functionality!
+* [x] Additional features that improve the app functionality:
+* [x] Navigation to the Our Games Section: A navigation bar at the top of the page allows users to quickly jump to the "Our Games" section, enhancing the site's usability and navigation.
+* [x] Search Functionality: Users can search for a specific game by its name using the search bar. This feature dynamically filters and displays games that match the search query, providing a more user-friendly experience.
+* [x] Sorting Games by Backers: Two additional buttons enable users to sort the games in either ascending or descending order based on the number of backers. This feature adds an interactive way to explore games based on their popularity and backing.
 
 ## Video Walkthrough
 
